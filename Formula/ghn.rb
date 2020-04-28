@@ -5,6 +5,12 @@ class Ghn < Formula
   sha256 "9b0a044c27f03a8687f15758115fdd4e00bf05e3f1da935c87145baa4d4e1fbc"
   head "https://github.com/kaukas/ghn.git"
 
+  depends_on "coreutils"
+  depends_on "fzf"
+  depends_on "gawk"
+  depends_on "hub"
+  depends_on "jq"
+
   def install
     bin.install ["bin/ghn"]
     libexec.install Dir["libexec/*"]
